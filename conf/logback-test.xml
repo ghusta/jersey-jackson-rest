@@ -13,7 +13,7 @@
         <file>logs/app-test.log</file>
     </appender>
 
-    <logger name="fr.husta.test" level="debug">
+    <logger name="fr.husta.test" level="debug" additivity="false">
         <appender-ref ref="STDOUT"/>
         <appender-ref ref="FILE"/>
     </logger>
