@@ -4,12 +4,13 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.ext.ContextResolver;
 import javax.ws.rs.ext.Provider;
 
+import com.fasterxml.jackson.datatype.jdk8.Jdk8Module;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.datatype.joda.JodaModule;
 
 /**
  * JAX-RS Provider for Jackson's {@link ObjectMapper}.
@@ -26,7 +27,8 @@ public class ObjectMapperContextResolver implements ContextResolver<ObjectMapper
         log.debug("init : {}", this.getClass().getSimpleName());
 
         mapper = new ObjectMapper();
-        mapper.registerModule(new JodaModule());
+        mapper.registerModule(new Jdk8Module());
+        mapper.registerModule(new JavaTimeModule());
         mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
     }
 

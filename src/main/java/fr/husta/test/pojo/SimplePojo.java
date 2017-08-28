@@ -1,10 +1,9 @@
 package fr.husta.test.pojo;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 import java.util.Date;
-
-import org.joda.time.DateTime;
-import org.joda.time.LocalDate;
-import org.joda.time.LocalDateTime;
 
 public class SimplePojo {
 
@@ -13,7 +12,7 @@ public class SimplePojo {
     private Date oldDate;
     private LocalDate dob;
     private LocalDateTime timestamp;
-    private DateTime timestampWithTimezone;
+    private ZonedDateTime timestampWithTimezone;
 
     public SimplePojo() {
     }
@@ -58,11 +57,11 @@ public class SimplePojo {
         this.timestamp = timestamp;
     }
 
-    public DateTime getTimestampWithTimezone() {
+    public ZonedDateTime getTimestampWithTimezone() {
         return timestampWithTimezone;
     }
 
-    public void setTimestampWithTimezone(DateTime timestampWithTimezone) {
+    public void setTimestampWithTimezone(ZonedDateTime timestampWithTimezone) {
         this.timestampWithTimezone = timestampWithTimezone;
     }
 }

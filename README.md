@@ -1,5 +1,10 @@
 # Test Jersey - JAX-RS 2.0 - Jackson 2 on Tomcat 
 
+## Prerequisites
+
+- Tomcat 8.5
+- Java 8
+
 ## Docker
 
 ### Build image
