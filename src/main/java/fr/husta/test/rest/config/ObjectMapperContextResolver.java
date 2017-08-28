@@ -23,7 +23,7 @@ public class ObjectMapperContextResolver implements ContextResolver<ObjectMapper
     private final ObjectMapper mapper;
 
     public ObjectMapperContextResolver() {
-        log.debug("init : {}", this.getClass().getSimpleName());
+        log.debug("init : {} (JAX-RS @Provider)", this.getClass().getSimpleName());
 
         mapper = new ObjectMapper();
         mapper.registerModule(new JodaModule());
