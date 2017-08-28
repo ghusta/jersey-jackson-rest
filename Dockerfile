@@ -9,7 +9,7 @@ ADD target/*.war $CATALINA_HOME/webapps/myapp.war
 # Application config
 RUN mkdir $CATALINA_HOME/app_conf/
 ADD conf/ $CATALINA_HOME/app_conf/
-# Stocker dans un volume
+# Définir un volume
 VOLUME $CATALINA_HOME/app_conf/
 
 # Create "$CATALINA_HOME/bin/setenv.sh"
