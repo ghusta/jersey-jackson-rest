@@ -8,7 +8,7 @@
 
 ### Run image
 
-> docker run -d --name rest-test -p8585:8080 ghusta/tomcat-jersey
+> docker run -d --name rest-test -p 8585:8080 ghusta/tomcat-jersey
 
 ## Notes
 
