@@ -1,4 +1,4 @@
-FROM tomcat:8.5
+FROM tomcat:9.0-jdk8
 
 # Au cas ou besoin de $JAVA_ENDORSED_DIRS (cf. catalina.sh)
 RUN mkdir $CATALINA_HOME/endorsed
