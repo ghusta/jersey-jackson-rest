@@ -14,9 +14,9 @@ VOLUME $CATALINA_HOME/app_conf/
 
 # Create "$CATALINA_HOME/bin/setenv.sh"
 # Escape char : https://docs.docker.com/engine/reference/builder/#/escape
-RUN echo "# Add app_conf to Tomcat CLASSPATH" > $CATALINA_HOME/bin/setenv.sh
-RUN echo "CLASSPATH=\$CATALINA_HOME/app_conf/" >> $CATALINA_HOME/bin/setenv.sh
-RUN chmod 750 $CATALINA_HOME/bin/setenv.sh
+RUN echo "# Add app_conf to Tomcat CLASSPATH" > $CATALINA_HOME/bin/setenv.sh \
+ && echo "CLASSPATH=\$CATALINA_HOME/app_conf/" >> $CATALINA_HOME/bin/setenv.sh \
+ && chmod 750 $CATALINA_HOME/bin/setenv.sh
 
 # Add user for role manager-gui
 COPY docker/conf/tomcat-users.xml $CATALINA_HOME/conf/
