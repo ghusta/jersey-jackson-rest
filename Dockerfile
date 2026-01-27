@@ -4,7 +4,7 @@ FROM tomcat:9.0-jre8
 RUN mkdir $CATALINA_HOME/endorsed
 
 # $CATALINA_HOME is defined in tomcat image
-COPY target/*.war $CATALINA_HOME/webapps/myapp.war
+COPY target/*.war $CATALINA_HOME/webapps/ROOT.war
 
 # Application config
 RUN mkdir $CATALINA_HOME/app_conf/
