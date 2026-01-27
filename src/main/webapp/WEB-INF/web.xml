@@ -8,15 +8,6 @@
     <description>REST Web Services</description>
     <display-name>REST Web Services</display-name>
 
-    <servlet>
-        <servlet-name>fr.husta.test.rest.RestApplication</servlet-name>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>fr.husta.test.rest.RestApplication</servlet-name>
-        <url-pattern>/rest/*</url-pattern>
-    </servlet-mapping>
-
     <!-- Listeners appeles dans l'ordre de declaration -->
 
     <welcome-file-list>
