@@ -1,7 +1,4 @@
-FROM tomcat:9.0-jre8
-
-# Au cas ou besoin de $JAVA_ENDORSED_DIRS (cf. catalina.sh)
-RUN mkdir $CATALINA_HOME/endorsed
+FROM tomcat:9.0-jre11
 
 # $CATALINA_HOME is defined in tomcat image
 COPY target/*.war $CATALINA_HOME/webapps/ROOT.war
