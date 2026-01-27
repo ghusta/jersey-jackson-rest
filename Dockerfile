@@ -1,4 +1,4 @@
-FROM tomcat:9.0-jre11
+FROM tomcat:10.1-jre11
 
 # $CATALINA_HOME is defined in tomcat image
 COPY target/*.war $CATALINA_HOME/webapps/ROOT.war
