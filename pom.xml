@@ -15,7 +15,7 @@
         <maven.compiler.release>11</maven.compiler.release>
         <maven.compiler.parameters>true</maven.compiler.parameters>
 
-        <jersey.version>2.44</jersey.version>
+        <jersey.version>2.47</jersey.version>
         <jackson.version>2.21.0</jackson.version>
         <slf4j.version>2.0.17</slf4j.version>
     </properties>
